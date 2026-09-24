@@ -1,0 +1,27 @@
+{
+  "KEY_EXCHANGE": {
+    "primary": "ML-KEM-768",
+    "hybrid": "X25519 + ML-KEM-768",
+    "tradeoff": "Public key ~1.2 KB vs 32-256 B today; slightly larger handshake, comparable speed"
+  },
+  "SIGNATURE": {
+    "primary": "ML-DSA-65",
+    "hybrid": "ECDSA P-256 + ML-DSA-65",
+    "tradeoff": "Signatures ~3.3 KB vs ~64 B for ECDSA; use SLH-DSA for very long-lived signatures"
+  },
+  "AES_128": {
+    "primary": "AES-256",
+    "hybrid": "AES-256",
+    "tradeoff": "Negligible cost; hardware acceleration makes AES-256 nearly as fast"
+  },
+  "BROKEN_HASH": {
+    "primary": "SHA-384 or SHA3-256",
+    "hybrid": "SHA-384 or SHA3-256",
+    "tradeoff": "Slightly slower than MD5/SHA-1, but not a real bottleneck"
+  },
+  "BROKEN_CIPHER": {
+    "primary": "AES-256-GCM",
+    "hybrid": "AES-256-GCM",
+    "tradeoff": "Modern authenticated encryption; needs a code change, not a big performance cost"
+  }
+}
