@@ -1,0 +1,71 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "components": [
+    {
+      "name": "RSA",
+      "type": "cryptographic-asset",
+      "evidence": {
+        "occurrences": [
+          { "line": 10, "location": "src/main/java/demo/CryptoDemo.java" }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": { "primitive": "pke" }
+      }
+    },
+    {
+      "name": "SHA256withECDSA",
+      "type": "cryptographic-asset",
+      "evidence": {
+        "occurrences": [
+          { "line": 16, "location": "src/main/java/demo/CryptoDemo.java" }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": { "primitive": "signature" }
+      }
+    },
+    {
+      "name": "AES-128",
+      "type": "cryptographic-asset",
+      "evidence": {
+        "occurrences": [
+          { "line": 21, "location": "src/main/java/demo/CryptoDemo.java" }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": { "primitive": "block-cipher" }
+      }
+    },
+    {
+      "name": "MD5",
+      "type": "cryptographic-asset",
+      "evidence": {
+        "occurrences": [
+          { "line": 25, "location": "src/main/java/demo/CryptoDemo.java" }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": { "primitive": "hash" }
+      }
+    },
+    {
+      "name": "SHA-384",
+      "type": "cryptographic-asset",
+      "evidence": {
+        "occurrences": [
+          { "line": 28, "location": "src/main/java/demo/CryptoDemo.java" }
+        ]
+      },
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": { "primitive": "hash" }
+      }
+    }
+  ]
+}
